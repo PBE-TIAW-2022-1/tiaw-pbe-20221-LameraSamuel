@@ -4,11 +4,11 @@ include('conexao.php');
 include('funcoes.php');
 
 // verifica se os campos não estão vazios
-if (!empty($_POST['Nome']) && !empty($_POST['Email']) && !empty($_POST['Senha']) ){
+if (!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['senha']) ){
 
-      $nome = $_POST['Nome'];
-      $email = $_POST['Email'];
-      $senha = $_POST['Senha'];
+      $nome = $_POST['nome'];
+      $email = $_POST['email'];
+      $senha = $_POST['senha'];
       
 
       // verifcar email repetido e barrar

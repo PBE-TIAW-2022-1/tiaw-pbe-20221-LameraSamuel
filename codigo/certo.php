@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-include("funcoesBanco.php");
+include("funcoes.php");
 
 var_dump("certos")
 

@@ -11,17 +11,20 @@ if (!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['senha'])
       $senha = $_POST['senha'];
       
 
-      // verifcar email repetido e barrar
-     // $queryemail = "select Email from login where Email = '{$email}'";
-      //$resultado = mysqli_query($conexao, $queryemail);
+      //verifcar email repetido e barrar
+      $queryemail = "select Email from login where Email = '{$email}'";
+      $resultado = mysqli_query($conexao, $queryemail);
 
-         //if(mysqli_num_rows($resultado) >= 1){
-               
-            //exit();
-        // }
-      
+         if(mysqli_num_rows($resultado) >= 1){
+            header('location: PrimeiroAcesso.php?email=2'); 
+            exit();
+        }else{
          cadastrarUsuario($conexao, $nome, $email, $senha);
-         header('location: PrimeiroAcesso.php?email=2');
+         exit();
+        }
+      
+       
+        
    }
   
 

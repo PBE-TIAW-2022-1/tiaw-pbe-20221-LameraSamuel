@@ -51,9 +51,7 @@
                                 <button type="submit" class="btn btn-default">Cadastrar</button>
                             </div>
                             <?php if( isset($_GET['campos']) ){ echo "<p style='color: #f00;'>Todos os campos precisam ser Preenchidos!</p>"; }?>
-                            <?php if( isset($_GET['cpf']) && $_GET['cpf'] == 1 ){ echo "<p style='color: #f00;'>O CPF precisa ser preenchido somente com números!</p>"; }?>
                             <?php if( isset($_GET['error']) == 1 ) echo"<p style='color: #f00;'>Não foi possível cadastrar usuário, tente novamente.</p>";  ?>
-                            <?php if( isset($_GET['cpf']) && $_GET['cpf'] == 2 ){ echo "<p style='color: #f00;'>O CPF já cadastrado</p>"; }?>
                             <?php if( isset($_GET['email']) && $_GET['email'] == 2 ){ echo "<p style='color: #f00;'>O e-mail já cadastrado</p>"; }?>
 
                         </div>

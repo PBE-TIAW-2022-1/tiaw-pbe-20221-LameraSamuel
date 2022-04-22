@@ -31,7 +31,7 @@ if(!empty($_POST['email']) && !empty($_POST['senha'])){
     //$varr = (int)$var['Perfil'];
 
     //if($var == 1){
-        header("Location: certo.php");
+        header("Location: home.php");
         //exit();
 
    /*else{

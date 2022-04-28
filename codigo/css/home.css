@@ -1,0 +1,93 @@
+.botao-esquerda {
+	box-shadow:inset 0px -1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #03468a 100%);
+	background-color:#79bbff;
+	border-radius:23px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    font-family: Arial;
+	font-size:17px;
+	font-weight:bold;
+    padding: 16px 10px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #528ecc;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    height:54px;
+    width:196px;
+    text-align: center;
+}
+.botao-direita {
+	box-shadow:inset 0px -1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #03468a 100%);
+	background-color:#79bbff;
+	border-radius:23px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    font-family: Arial;
+	font-size:17px;
+	font-weight:bold;
+    padding: 16px 10px;
+    text-decoration:none;
+	text-shadow:0px -1px 0px #528ecc;
+    height:54px;
+    width:196px;
+    text-align: center;
+}
+.botao-final {
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	background-color:#ffc477;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:19px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+    margin-top: 5%;
+}
+
+.botao-esquerda:hover, .botao-direita:hover {
+	background:linear-gradient(to bottom, #03468a 5%, #79bbff 100%);
+	background-color:#03468a;
+}
+.botao-esquerda:active, .botao-direita:active {
+	position:relative;
+	top:1px;
+}
+
+
+#nav-container{
+ margin-left: 80%;
+}
+
+#aba-cursos {
+    background-color: #272727;
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    /*padding: 20px 30px;*/
+    padding: 71px 0px;  
+    margin-top: 15vh;
+    border-radius: 20px;
+    text-align: center;
+}
+.titulo-aba-cursos {
+    font-size:40px;
+    background-color:  #1E90FF;
+    color: #272727;
+    text-align: center;
+    font-weight: bolder;
+    font-family:"Public Sans", sans-serif;
+    padding: 25px;
+    margin: 0px;
+    border-top: 20px solid #1E90FF;
+    text-transform: uppercase;
+}

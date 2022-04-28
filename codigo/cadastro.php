@@ -1,5 +1,5 @@
 <?php  
-//6session_start();
+session_start();
 include('conexao.php');
 include('funcoes.php');
 

@@ -11,15 +11,23 @@ if(!empty($_POST['email']) && !empty($_POST['senha'])){
     // $senha = sha1($_POST['senha']);
     $senha = SHA1($_POST['senha']);
 
-    $query = "select Email, Senha from login where Email = '{$email}' AND Senha = '{$senha}'";
+    $query = "select Email, Senha, Nome from login where Email = '{$email}' AND Senha = '{$senha}'";
     $login = mysqli_query($conexao, $query);
     
     // valida se tem usuario com os dados informados
     if($login && mysqli_num_rows($login) == 1 )
     {
-            $query = "select Email from login where Email = '{$email}'";
-            $resultado = mysqli_query($conexao, $query);
-            header("Location: home.php");
+
+        
+      // pego o nome para usar na sessão
+      $query = "select Nome from login";
+      $resul = mysqli_fetch_assoc($login);
+      $_SESSION['Nome']=$resul['Nome'];
+
+
+      $query = "select Email from login where Email = '{$email}'";
+      $resultado = mysqli_query($conexao, $query);
+      header("Location: home.php");
 
 
       

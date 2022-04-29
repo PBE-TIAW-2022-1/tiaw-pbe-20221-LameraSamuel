@@ -35,9 +35,9 @@ if( !$_SESSION ){
     <h1 class="titulo-aba-cursos">Áreas de TI</h1>
 
     <header>
-        <nav class="container" id="nav-container">
-            <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                <div>
+        <navid="nav-container">
+            <div id="navbar-links">
+                <div class="controle">
                     <a id="Nome" href="#"><?=$nome?></a><br/>
                     <a id="sair" href="login.php" class="botao-direita">SAIR</a>
                 </div>

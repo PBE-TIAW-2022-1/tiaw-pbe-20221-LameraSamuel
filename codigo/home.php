@@ -32,7 +32,7 @@ if( !$_SESSION ){
 ?>
 
 <body>
-    <h1 class="titulo-aba-cursos">Áreas de TI</h1>
+    <h1 class="titulo-aba-cursos">home em construção por outro colaborador</h1>
 
     <header>
         <navid="nav-container">

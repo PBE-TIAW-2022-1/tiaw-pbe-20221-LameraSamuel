@@ -1,6 +1,6 @@
 <?php  
 session_start();
-session_destroy();
+session_destroy();3
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -43,15 +43,7 @@ session_destroy();
                                             placeholder="Insira sua senha">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox">Lembrar-me
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                            
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
                                         <button type="submit" class="btn btn-default">Entrar</button>

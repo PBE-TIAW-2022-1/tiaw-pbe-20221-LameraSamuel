@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema iquest
+-- Schema bd_iquest
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema iquest
+-- Schema bd_iquest
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `iquest` DEFAULT CHARACTER SET utf8 ;
-USE `iquest` ;
+CREATE SCHEMA IF NOT EXISTS `bd_iquest` DEFAULT CHARACTER SET utf8 ;
+USE `bd_iquest` ;
 
 -- -----------------------------------------------------
--- Table `iquest`.`Login`
+-- Table `bd_iquest`.`Login`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `iquest`.`Login` (
+CREATE TABLE IF NOT EXISTS `bd_iquest`.`Login` (
   `Id_login` INT NOT NULL AUTO_INCREMENT,
   `Email` VARCHAR(45) NOT NULL,
   `Senha` VARCHAR(45) NOT NULL,
@@ -30,9 +30,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `iquest`.`Area_atuacao`
+-- Table `bd_iquest`.`Area_atuacao`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `iquest`.`Area_atuacao` (
+CREATE TABLE IF NOT EXISTS `bd_iquest`.`Area_atuacao` (
   `Id_descricao` INT NOT NULL AUTO_INCREMENT,
   `Descricao` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`Id_descricao`))
@@ -40,9 +40,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `iquest`.`Pergunta`
+-- Table `bd_iquest`.`Pergunta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `iquest`.`Pergunta` (
+CREATE TABLE IF NOT EXISTS `bd_iquest`.`Pergunta` (
   `Id_pergunta` INT NOT NULL AUTO_INCREMENT,
   `Descricao` VARCHAR(45) NOT NULL,
   `Area_atuacao_Id_descricao` INT NOT NULL,
@@ -50,16 +50,16 @@ CREATE TABLE IF NOT EXISTS `iquest`.`Pergunta` (
   INDEX `fk_Pergunta_Area_atuacao1_idx` (`Area_atuacao_Id_descricao` ASC),
   CONSTRAINT `fk_Pergunta_Area_atuacao1`
     FOREIGN KEY (`Area_atuacao_Id_descricao`)
-    REFERENCES `iquest`.`Area_atuacao` (`Id_descricao`)
+    REFERENCES `bd_iquest`.`Area_atuacao` (`Id_descricao`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `iquest`.`Opcao_para_marcar`
+-- Table `bd_iquest`.`Opcao_para_marcar`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `iquest`.`Opcao_para_marcar` (
+CREATE TABLE IF NOT EXISTS `bd_iquest`.`Opcao_para_marcar` (
   `Id_opcao` INT NOT NULL AUTO_INCREMENT,
   `Descricao` VARCHAR(45) NOT NULL,
   `Pergunta_Id_pergunta` INT NOT NULL,
@@ -67,16 +67,16 @@ CREATE TABLE IF NOT EXISTS `iquest`.`Opcao_para_marcar` (
   INDEX `fk_Opcao_para_marcar_Pergunta_idx` (`Pergunta_Id_pergunta` ASC),
   CONSTRAINT `fk_Opcao_para_marcar_Pergunta`
     FOREIGN KEY (`Pergunta_Id_pergunta`)
-    REFERENCES `iquest`.`Pergunta` (`Id_pergunta`)
+    REFERENCES `bd_iquest`.`Pergunta` (`Id_pergunta`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `iquest`.`Resposta`
+-- Table `bd_iquest`.`Resposta`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `iquest`.`Resposta` (
+CREATE TABLE IF NOT EXISTS `bd_iquest`.`Resposta` (
   `Id_resposta` INT NOT NULL AUTO_INCREMENT,
   `Pergunta_Id_pergunta` INT NOT NULL,
   `Opcao_para_marcar_Id_opcao` INT NOT NULL,
@@ -85,14 +85,14 @@ CREATE TABLE IF NOT EXISTS `iquest`.`Resposta` (
   INDEX `fk_Resposta_Opcao_para_marcar1_idx` (`Opcao_para_marcar_Id_opcao` ASC),
   CONSTRAINT `fk_Resposta_Pergunta1`
     FOREIGN KEY (`Pergunta_Id_pergunta`)
-    REFERENCES `iquest`.`Pergunta` (`Id_pergunta`)
+    REFERENCES `bd_iquest`.`Pergunta` (`Id_pergunta`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Resposta_Opcao_para_marcar1`
     FOREIGN KEY (`Opcao_para_marcar_Id_opcao`)
-    REFERENCES `iquest`.`Opcao_para_marcar` (`Id_opcao`)
+    REFERENCES `bd_iquest`.`Opcao_para_marcar` (`Id_opcao`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 ENGINE = InnoDB;
 
 

@@ -45,17 +45,7 @@ if( !$_SESSION ){
         </nav>
     </header>
 
-    <div class="tela-login container">
-        <ul class="nav nav-tabs" id=aba-cursos>
-            <a href="#" class="botao-esquerda">Front-End</a>
-            <a href="#" class="botao-direita">Back-End</a>
-            <a href="#" class="botao-esquerda">Full-Stack</a>
-            <a href="#" class="botao-direita">DevOps</a>
-            <a href="#" class="botao-esquerda">Segurança</a>
-            <a href="#" class="botao-direita">Redes</a>
-            <a href="#" class="botao-final">Faça o Teste de Aptidão</a>
-        </ul>
-    </div>
+
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

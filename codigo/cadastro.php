@@ -9,8 +9,7 @@ if (!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['senha'])
       $nome = $_POST['nome'];
       $email = $_POST['email'];
       $senha = $_POST['senha'];
-      
-
+   
       //verifcar email repetido e barrar
       $queryemail = "select Email from login where Email = '{$email}'";
       $resultado = mysqli_query($conexao, $queryemail);

@@ -1,8 +1,18 @@
 <?php
-//include_once 'conexão.php';
+session_start();
+include("conexao.php");
+include("Funcoes.php");
+include("Funcoes3.php");
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
+
+
 <head>
 	<meta charset="utf-8">
 	<title>Quiz</title>
@@ -12,26 +22,73 @@
 	
 </head>
 
-<body>
-	<header>
-		<h1 class="titulo-aba-cursos">Teste De Aptidão</h1>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-		<div class="header-right">
-			<a class="active" href="../home.php">Home</a>
-			<a href="index.php">Quiz</a>
-			<a href="amostra_sobre.html">Sobre</a>
-   		</div>  
-	</header>
-	<div class="tela-login">
-		<form>
-			<h1>Pergunta 2</h1>
-			<a href="Pergunta3.php"><input type="button" value="Teste" class="enviar"></input></a>
-			<a href="Pergunta3.php"><input type="button" value="Teste" class="enviar"></input></a>
-			<a href="Pergunta3.php"><input type="button" value="Teste" class="enviar"></input></a>
-			<a href="Pergunta3.php"><input type="button" value="Teste" class="enviar"></input></a>
 
-            <p class="alert-success"><a href="index.php"><input type="button" value="Pergunta Anterior" class="enviar"></input></a>
-            
+<?php
+if( !$_SESSION ){
+    header('location: ../login.php');
+    exit();
+}
+?>
+	<body>
 
-</body>
+		<div class="header">
+			<div class="header-right">
+				<a class="active" href="../home.php">Home</a>
+				<a href="index.php">Quiz</a>
+				<a href="amostra_sobre.html">Sobre</a>
+			</div>  
+		</div>
+
+		
+		<div class="tela-login">
+				<form>
+					<?php
+						$arraybuscar = buscapergunta($conexao);
+						foreach ($arraybuscar as $busca){
+					?>
+					<h1><?=$busca["Descricao"]?></h1>
+				</form>
+				<?php } ?>
+
+
+
+				<form>
+					<?php
+						$arraypronto = buscaopcao1($conexao);
+						foreach ($arraypronto as $buscando){
+					?>
+					<a href="Pergunta3.php"><input type="button" value=<?=$buscando["Descricao"]?> class="enviar"></input></a>
+				</form>
+				<?php } ?>
+
+				<form>
+					<?php
+						$arraypronto = buscaopcao2($conexao);
+						foreach ($arraypronto as $buscando){
+					?>
+				<a href="Pergunta3.php"><input type="button" value=<?=$buscando["Descricao"]?> class="enviar"></input></a>
+				</form>
+				<?php } ?>
+
+				<form>
+					<?php
+						$arraypronto = buscaopcao3($conexao);
+						foreach ($arraypronto as $buscando){
+					?>
+				<a href="Pergunta3.php"><input type="button" value=<?=$buscando["Descricao"]?> class="enviar"></input></a>
+				</form>
+				<?php } ?>
+
+				<form>
+					<?php
+						$arraypronto = buscaopcao4($conexao);
+						foreach ($arraypronto as $buscando){
+					?>
+				<a href="Pergunta3.php"><input type="button" value=<?=$buscando["Descricao"]?> class="enviar"></input></a>
+				</form>
+				<?php } ?>
+
+				<p class="alert-success"><a href="index.php"><input type="button" value="Pergunta Anterior" class="enviar"></input></a>
+
+	</body>
 </html>

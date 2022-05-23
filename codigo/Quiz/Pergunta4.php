@@ -1,6 +1,9 @@
 <?php
-//include_once 'conexão.php';
+session_start();
+include("../conexao.php");
+include("../funcoes.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,16 +15,22 @@
 	
 </head>
 
+<?php
+if( !$_SESSION ){
+    header('location: ../login.php');
+    exit();
+}
+?>
+
 <body>
-	<header>
-		<h1 class="titulo-aba-cursos">Teste De Aptidão</h1>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
+	<div class="header">
 		<div class="header-right">
 			<a class="active" href="../home.php">Home</a>
 			<a href="index.php">Quiz</a>
 			<a href="amostra_sobre.html">Sobre</a>
    		</div>  
-	</header>
+	</div>
+	
 	<div class="tela-login">
 		<form>
 			<h1>Pergunta 4</h1>

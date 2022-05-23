@@ -16,6 +16,11 @@
 	<header>
 		<h1 class="titulo-aba-cursos">Teste De Aptidão</h1>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<div class="header-right">
+			<a class="active" href="../home.php">Home</a>
+			<a href="index.php">Quiz</a>
+			<a href="amostra_sobre.html">Sobre</a>
+   		</div>  
 	</header>
 	<div class="tela-login">
 		<form>
@@ -26,7 +31,6 @@
 			<a href="Pergunta8.php"><input type="button" value="Teste" class="enviar"></input></a>
 
             <p class="alert-success"><a href="Pergunta6.php"><input type="button" value="Pergunta Anterior" class="enviar"></input></a>
-            <p class="alert-success"><a href="Pergunta8.php"><input type="button" value="Proxima Pergunta" class="enviar"></input></a>
 
 </body>
 </html>

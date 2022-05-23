@@ -17,7 +17,6 @@ $nome = $_SESSION["Nome"];
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/login.css">
-    <title>Formulário Cadastro</title>
 
 </head>
 
@@ -29,8 +28,6 @@ if( !$_SESSION ){
 ?>
 
 <body>
-
-    
 
     <div class="header">
     <div class="header-right">
@@ -46,7 +43,8 @@ if( !$_SESSION ){
             <div id="navbar-links">
                 <div class="controle">
                     <a id="Nome" href="#"><?=$nome?></a><br/>
-                    <a id="sair" href="gerenciado.php" class="botao-direita">Editar perfil</a>
+                    <a id="sair" href="Gerenciado.php" class="botao-up">Editar perfil</a>
+                    <a id="sair" href="login.php" class="botao-down">Sair</a>
                 </div>
             </div>
         </nav>
@@ -76,10 +74,7 @@ if( !$_SESSION ){
         <span class="close">&times;</span>
         <h1 id="titulo_modal"> Você deseja ser redirecionado para página com informações sobre a área escolhida?</h1>
 
-        <a
-        if(onclick="abre_modal('front.html')" id="botao_front"){
-            href="Redes.html" id="botao_front" class="botao-esquerda-modal"
-        } >Sim</a>
+        <a id="botao_sim" class="botao-esquerda-modal">Sim</a>
         
         <a id="botao_nao" class="botao-direita-modal">Não</a>
         </div>

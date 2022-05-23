@@ -35,7 +35,7 @@
 	height: 54px;
 	width: 138px;
     text-align: center;
-	margin-left: 82%;
+	margin-left: 68%;
 }
 
 .botao-down{
@@ -289,14 +289,6 @@ box-shadow:inset 0px -1px 0px 0px #bbdaf7;
 
 	.botao-esquerda-modal{
 		margin-left: 3%;
-	}
-
-	.botao-up {
-		margin-left: 29%;
-	}
-	
-	.botao-down {
-		margin-left: 29%;
 	}
 
 	#titulo_modal{

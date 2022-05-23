@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `iquest2`.`Login` (
 -- -----------------------------------------------------
 -- Table `iquest2`.`Area_atuacao`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `iquest2`.`Area_atuacao` (
+CREATE TABLE IF NOT EXISTS `iquest`.`Area_atuacao` (
   `Id_descricao` INT NOT NULL AUTO_INCREMENT,
   `Descricao` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`Id_descricao`));

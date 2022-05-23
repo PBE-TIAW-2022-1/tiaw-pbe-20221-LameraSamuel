@@ -11,7 +11,7 @@ include("../funcoes.php");
 	<title>Quiz</title>
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="../css/home.css">
 	
 </head>
 

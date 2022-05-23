@@ -6,8 +6,6 @@ include("Funcoes1.php");
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,8 +16,8 @@ include("Funcoes1.php");
 	<title>Quiz</title>
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="home.css">
-	
+	<link rel="stylesheet" href="../css/home.css">
+
 </head>
 
 
@@ -41,6 +39,7 @@ if( !$_SESSION ){
 
 		
 		<div class="tela-login">
+
 				<form>
 					<?php
 						$arraybuscar = buscapergunta($conexao);
@@ -89,6 +88,6 @@ if( !$_SESSION ){
 				<?php } ?>
 
 				<p class="alert-success"><a href="index.php"><input type="button" value="Pergunta Anterior" class="enviar"></input></a>
-
+		
 	</body>
 </html>

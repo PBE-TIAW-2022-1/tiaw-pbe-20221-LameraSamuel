@@ -59,7 +59,7 @@ if( !$_SESSION ){
             <a onclick="abre_modal('DevOps.html')" id="botao_devops" class="botao-direita" onmouseover="mudar_background('#0000CC')" onmouseout="mudar_background('#272727')">DevOps</a>
             <a onclick="abre_modal('seguranca.html')" id="botao_seg"class="botao-esquerda" onmouseover="mudar_background('#606060')" onmouseout="mudar_background('#272727')">Segurança</a>
             <a onclick="abre_modal('Redes.html')" id="botao_redes" class="botao-direita" onmouseover="mudar_background('#009999')" onmouseout="mudar_background('#272727')">Redes</a>
-            <a onclick="abre_modal('amostra_curso.html')" id="botao_quiz" class="botao-final" onmouseover="mudar_background('#fb9e25')" onmouseout="mudar_background('#272727')">Faça o Teste de Aptidão</a>
+            <a onclick="abre_modal('Quiz/index.php')" id="botao_quiz" class="botao-final" onmouseover="mudar_background('#fb9e25')" onmouseout="mudar_background('#272727')">Faça o Teste de Aptidão</a>
         </ul>
     </div>
 

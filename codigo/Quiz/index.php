@@ -2,7 +2,7 @@
 session_start();
 include("conexao.php");
 include("Funcoes.php");
-include("Funcoes2.php");
+include("Funcoes1.php");
 ?>
 
 

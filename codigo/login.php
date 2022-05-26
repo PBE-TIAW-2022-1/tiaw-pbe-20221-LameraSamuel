@@ -11,6 +11,7 @@ session_destroy();3
 
 <head>
     <meta charset="uft-8">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
@@ -58,6 +59,7 @@ session_destroy();3
         </ul>
 
     </div>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 

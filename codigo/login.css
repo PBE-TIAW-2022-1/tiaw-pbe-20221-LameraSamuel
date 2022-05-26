@@ -6,7 +6,7 @@
     color: #272727;
     text-align: center;
     font-weight: bolder;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:"Public Sans", sans-serif;
     padding: 25px;
     margin: 0px;
     border-top: 20px solid #1E90FF;
@@ -24,10 +24,10 @@ body {
     background-color: #1E90FF;
     color: #ffff;
     border-color: #1E90FF;
-    border-radius: 20px;
+    border-radius: 7px;
 }
 #login-container {
-    background-color: #000000;
+    background-color: #272727;
     width: 480px;
     margin-left: auto;
     margin-right: auto;

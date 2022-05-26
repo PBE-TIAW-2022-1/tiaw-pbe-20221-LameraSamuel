@@ -22,6 +22,7 @@ session_destroy();3
 
 
 <body>
+    <div class='teste'>
     <h1 class="titulo-sistema-login">IQUEST</h1>
             <div class="tela-login container">
                 <ul class="nav nav-tabs" id=login-container>
@@ -61,6 +62,7 @@ session_destroy();3
     </div>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+</div>
 </body>
 
 </html>

@@ -10,7 +10,10 @@
     padding: 25px;
     margin: 0px;
     border-top: 20px solid #1E90FF;
-    text-transform: uppercase;
+    text-transform: uppercase;  
+    
+   
+
 }
 body {  
     background-position:initial ;
@@ -25,21 +28,24 @@ body {
     color: #ffff;
     border-color: #1E90FF;
     border-radius: 7px;
+    
 }
 #login-container {
     background-color: #272727;
-    width: 380px;
+    width: 480px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px 30px;
     margin-top: 15vh;
     border-radius: 20px;
     text-align: center;
+   
 
 }
 form {
     margin-top: 30px;
     margin-bottom: 40px;
+    
 }
 label, input {
     display: block;
@@ -56,3 +62,52 @@ label {
     cursor: pointer;
     border-color: #1E90FF;
 }
+
+
+
+@media screen and (max-width: 500px) {
+	.titulo-sistema-login{
+	  float: none;
+	  display: inline block;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: -1px;
+	}
+	
+	body {
+	  float: none;
+	}
+
+	.nav-tabs>li.active>a{
+		width: 276px;
+        display: inline-block;
+	}
+
+	#login-container{
+		background-color: #272727;
+        width: 350px;
+        margin-left: auto;
+        margin-right: 1px;
+        padding: 20px 30px;
+         margin-top: 15vh;
+         border-radius: 20px;
+         text-align: center;
+	}
+
+	form {
+		margin-left: 5%;
+	}
+
+	label, input{
+		margin-left: 3%;
+	}
+
+	label{
+		font-size: 26px;
+	}
+
+    .btn{
+        margin-left: 3%; 
+    }
+
+  }

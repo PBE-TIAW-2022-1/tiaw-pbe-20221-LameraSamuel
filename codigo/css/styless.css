@@ -80,3 +80,21 @@ legend{
 #tabelagerenciar {
     margin: - 50px;
     }
+
+
+@media screen and (max-width: 500px) {
+        
+    .box{
+        color: red;
+        position: absolute;
+        top: 64%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 15px;
+        border-radius: 15px;
+        width: 82%;
+    
+    }
+    
+    }

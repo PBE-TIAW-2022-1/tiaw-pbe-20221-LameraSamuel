@@ -87,7 +87,8 @@ if( !$_SESSION ){
 				</form>
 				<?php } ?>
 
-				<p class="alert-success"><a href="index.php"><input type="button" value="Pergunta Anterior" class="enviar"></input></a>
+			
+				<p class="alert-success"><a href="../home.php"><input type="button" value="Voltar a Home" class="enviar"></input></a>
 		
 	</body>
 </html>

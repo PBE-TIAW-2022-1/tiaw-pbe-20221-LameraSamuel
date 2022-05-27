@@ -29,20 +29,18 @@ if(isset($_POST['submit']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar perfil de usuario</title>
     <link rel="stylesheet" href="./css/styless.css">
+    <link rel="stylesheet" href="css/home.css">
     <style>
     
     </style>
 
-    <header>
-        <navid="nav-container">
-            <div id="navbar-links">
-                <div class="controle">
-                    <a id="Nome" href="#"><?=$nome?></a><br/>
-                    <a id="sair" href="login.php" class="botao-direita">SAIR</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="header">
+    <div class="header-right">
+        <a class="active" href="home.php">Home</a>
+        <a href="Quiz/index.php">Quiz</a>
+        <a href="paginaconstrução.html">Sobre</a>
+    </div>  
+    </div>
 </head>
 <body>
     <div class="box">

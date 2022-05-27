@@ -8,14 +8,22 @@
 	<title>Quiz</title>
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="../css/home.css">
 	
 </head>
 
 <body>
-	<header>
-		<h1 class="titulo-aba-cursos">Pagina em construção</h1>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-	</header>
+<div class="header">
+			<div class="header-right">
+				<a class="active" href="../home.php">Home</a>
+				<a href="index.php">Quiz</a>
+				<a href="../paginaconstrução.html">Sobre</a>
+			</div>  
+
+
+		
+		</div>
+
+		<h1 class='mock'> Pagina em Construção </h1>
 </body>
 </html>

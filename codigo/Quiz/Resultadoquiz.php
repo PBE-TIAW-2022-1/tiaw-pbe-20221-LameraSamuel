@@ -34,6 +34,8 @@ echo "<div class=\"titulo-aba-cursos\">De acordo com suas respostas indicamos qu
 
 
 
-?>            <a href="Area.php"><input type="button" value="Saber mais sobre a area" class="enviar"></input></a>
+?>
+<a href="Area.php"><input type="button" value="Saber mais sobre a area" class="enviar"></input></a>
+<a href="Pergunta10.php"><input type="button" value="Voltar ao Quiz" class="enviar"></input></a>
 </body>
 </html>

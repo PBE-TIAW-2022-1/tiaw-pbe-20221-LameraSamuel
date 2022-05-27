@@ -262,6 +262,12 @@ box-shadow:inset 0px -1px 0px 0px #bbdaf7;
   .header-right {
 	float: left;
   }
+
+  .mock{
+	  font-size: 60px;
+		text-align: center;
+		padding-top: 350PX;
+  }
   
   @media screen and (max-width: 500px) {
 	.header a {

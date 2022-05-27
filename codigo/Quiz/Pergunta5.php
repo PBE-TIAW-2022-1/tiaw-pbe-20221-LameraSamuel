@@ -33,7 +33,7 @@ if( !$_SESSION ){
 			<div class="header-right">
 				<a class="active" href="../home.php">Home</a>
 				<a href="index.php">Quiz</a>
-				<a href="amostra_sobre.html">Sobre</a>
+				<a href="../paginaconstrução.html">Sobre</a>
 			</div>  
 		</div>
 

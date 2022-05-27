@@ -4,6 +4,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(34, 34, 34);
     margin: 0px;
+  margin-bottom: 30px;
 }
 .cabeçalho{
     background-color:rgb(28, 157, 243);
@@ -13,12 +14,6 @@ body{
  padding-left: 20px ;
  
  margin-bottom: 60px;
-}
-
-.cabeçalho a{
-    cursor: pointer;
-    text-decoration: none;
-    color: rgb(34, 34, 34);
 }
 
 .cabeçalho_cursos {
@@ -36,17 +31,15 @@ margin-bottom: 40px;
    
 }
 .curso {
+    
     max-width: 1200px;
     margin: 0 auto;
     background-color: rgb(34, 34, 34);
     border-radius: 20px;
     color: rgb(209, 209, 209);
-}
+    border: 2px solid black;
 
-.curso a{
-    cursor: pointer;
-    text-decoration: none;
-    color: rgb(209, 209, 209);
+    
 }
 .descriçao {
     text-align: justify;
@@ -71,4 +64,28 @@ align-items: center;
 }
 .lista_começar li {
     padding-bottom: 20px;
+}
+
+p a:visited {
+
+    color:rgb(209, 209, 209);
+
+}
+p a:link{
+    text-decoration: none;
+    color: rgb(209, 209, 209);
+}
+
+h2 a:link{
+
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+}
+h2 a:visited{
+    color:rgb(34, 34, 34)
+}
+
+iframe {
+    margin-top: 20px;
+    max-width: 100%;
 }

@@ -35,7 +35,7 @@
 	height: 54px;
 	width: 138px;
     text-align: center;
-	margin-left: 68%;
+	margin-left: 80%;
 }
 
 .botao-down{
@@ -265,9 +265,7 @@ box-shadow:inset 0px -1px 0px 0px #bbdaf7;
   
   @media screen and (max-width: 500px) {
 	.header a {
-	  float: none;
-	  display: block;
-	  text-align: left;
+	 	width: 276px;
 	}
 	
 	.header-right {
@@ -294,5 +292,51 @@ box-shadow:inset 0px -1px 0px 0px #bbdaf7;
 	#titulo_modal{
 		font-size: 26px;
 	}
+
+	.botao-up{
+		box-shadow:inset 0px -1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #03468a 100%);
+	background-color:#79bbff;
+	border-radius:23px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    font-family: Arial;
+	font-size:17px;
+	font-weight:bold;
+    padding: 16px 10px;
+    text-decoration:none;
+	text-shadow:0px -1px 0px #528ecc;
+	height: 54px;
+	width: 138px;
+    text-align: center;
+	margin-left: 60%;
+}
+
+.botao-down{
+		box-shadow:inset 0px -1px 0px 0px #bbdaf7;
+		background:linear-gradient(to bottom, #79bbff 5%, #03468a 100%);
+		background-color:#79bbff;
+		border-radius:23px;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family: Arial;
+		font-size:17px;
+		font-weight:bold;
+		padding: 16px 10px;
+		text-decoration:none;
+		text-shadow:0px -1px 0px #528ecc;
+		height: 54px;
+		width: 138px;
+		text-align: center;
+		margin-left: 60%;
+		margin-top: 10px;
+
+
+
+	}
+
+
 
   }

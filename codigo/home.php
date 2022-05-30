@@ -35,7 +35,17 @@ if( !$_SESSION ){
         <a class="active" href="home.php">Home</a>
         <a href="Quiz/index.php">Quiz</a>
         <a href="paginaconstrução.html">Sobre</a>
-    </div>  
+    </div> 
+
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">☰</button>
+      <div id="myDropdown" class="dropdown-content">
+             <a id="Nome" href="#"><?=$nome?></a>
+             <a id="sair" href="Gerenciado.php">Editar perfil</a>
+             <a id="sair" href="login.php">Sair</a>
+      </div>
+    </div>
+
     </div>
 
     
@@ -43,9 +53,7 @@ if( !$_SESSION ){
         <navid="nav-container">
             <div id="navbar-links">
                 <div class="controle">
-                    <a id="Nome" href="#"><?=$nome?></a><br/>
-                    <a id="sair" href="Gerenciado.php" class="botao-up">Editar perfil</a>
-                    <a id="sair" href="login.php" class="botao-down">Sair</a>
+                    
                 </div>
             </div>
         </nav>
@@ -131,6 +139,25 @@ if( !$_SESSION ){
         window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+        }
+        }
+
+
+        function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
         }
         }
 

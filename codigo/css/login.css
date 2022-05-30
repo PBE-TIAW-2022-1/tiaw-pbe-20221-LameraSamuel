@@ -21,6 +21,14 @@ body {
     background-size: cover;
 }
 
+
+.footer{
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    margin-top: 220px;
+}
+
 /* Configurações específicas dos componentes da pagina (Formulário/Botões) */
 
 .nav-tabs>li.active>a {

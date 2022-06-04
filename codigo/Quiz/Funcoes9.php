@@ -43,3 +43,17 @@ function buscaopcao4($conexao){
     array_push($arraypronto,$buscando);
     return $arraypronto;
 }
+
+function Resposta($conexao,$nome,$area){
+   
+    $query ="INSERT into respostas (Area,Pontos,Usuario) values ('{$area}', 1, '{$nome}')";
+    $result = mysqli_query($conexao, $query);
+  
+ }
+
+ function Resposta($conexao,$nome,$area){
+   
+    $query ="INSERT into respostas (Area,Pontos,Usuario) values ('{$area}', 1, '{$nome}')";
+    $result = mysqli_query($conexao, $query);
+  
+ }

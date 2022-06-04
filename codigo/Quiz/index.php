@@ -3,6 +3,7 @@ session_start();
 include("conexao.php");
 include("Funcoes.php");
 include("Funcoes1.php");
+$nome = $_SESSION["Nome"];
 ?>
 
 
@@ -40,55 +41,108 @@ if( !$_SESSION ){
 		
 		<div class="tela-login">
 
-				<form>
-					<?php
-						$arraybuscar = buscapergunta($conexao);
-						foreach ($arraybuscar as $busca){
-					?>
+		<div id="login">
+                <form method="post" action="">
+					
+						<?php
+							$arraybuscar = buscapergunta($conexao);
+							foreach ($arraybuscar as $busca){
+						?>
 					<h1><?=$busca["Descricao"]?></h1>
-				</form>
+					
 				<?php } ?>
 
+                    <p>
+						<?php
+							$arraypronto = buscaopcao1($conexao);
+							foreach ($arraypronto as $buscando){
+						?>
+                        <input id="nome_login" name="A" value=<?=$buscando["Descricao"]?> type="submit" />
+                    </p><?php } ?>
+
+					<p>
+						<?php
+							$arraypronto = buscaopcao2($conexao);
+							foreach ($arraypronto as $buscando){
+						?>
+                        <input id="nome_login" name="B" value=<?=$buscando["Descricao"]?> type="submit" />
+                    </p><?php } ?>
+
+					<p>
+						<?php
+							$arraypronto = buscaopcao3($conexao);
+							foreach ($arraypronto as $buscando){
+						?>
+                        <input id="nome_login" name="C" value=<?=$buscando["Descricao"]?> type="submit" />
+                    </p><?php } ?>
+
+					<p>
+						<?php
+							$arraypronto = buscaopcao4($conexao);
+							foreach ($arraypronto as $buscando){
+						?>
+                        <input id="nome_login" name="D" value=<?=$buscando["Descricao"]?> type="submit" />
+                    </p><?php } ?>
+
+					<p>
+						<?php
+							$arraypronto = buscaopcao5($conexao);
+							foreach ($arraypronto as $buscando){
+						?>
+                        <input id="nome_login" name="E" value=<?=$buscando["Descricao"]?> type="submit" />
+                    </p><?php } ?>
+
+					<p>
+						<?php
+							$arraypronto = buscaopcao6($conexao);
+							foreach ($arraypronto as $buscando){
+						?>
+                        <input id="nome_login" name="F" value=<?=$buscando["Descricao"]?> type="submit" />
+                    </p><?php } ?>
 
 
-				<form>
-					<?php
-						$arraypronto = buscaopcao1($conexao);
-						foreach ($arraypronto as $buscando){
-					?>
-					<a href="Pergunta2.php"><input type="button" value=<?=$buscando["Descricao"]?> class="enviar"></input></a>
-				</form>
-				<?php } ?>
 
-				<form>
-					<?php
-						$arraypronto = buscaopcao2($conexao);
-						foreach ($arraypronto as $buscando){
-					?>
-				<a href="Pergunta2.php"><input type="button" value=<?=$buscando["Descricao"]?> class="enviar"></input></a>
-				</form>
-				<?php } ?>
+                    
+                </form>
+            </div>
 
-				<form>
-					<?php
-						$arraypronto = buscaopcao3($conexao);
-						foreach ($arraypronto as $buscando){
-					?>
-				<a href="Pergunta2.php"><input type="button" value=<?=$buscando["Descricao"]?> class="enviar"></input></a>
-				</form>
-				<?php } ?>
+			<?php
+    	
+		if (isset($_POST['A'])) {
+			$valor1 = 1;
+			Resposta($conexao,$nome,'Front');
+			header( "location: Pergunta2.php");
+		}
+		if (isset($_POST['B'])){
+			$valor1 = 2;
+			Resposta($conexao,$nome,'Back');
+			header( "location: Pergunta2.php");
+		}
+		if (isset($_POST['C'])){
+			$valor1 = 3;
+			Resposta($conexao,$nome,'Full');
+			header( "location: Pergunta2.php");
+		}
+		if (isset($_POST['D'])){
+			$valor1 = 4;
+			Resposta($conexao,$nome,'DevOps');
+			header( "location: Pergunta2.php");
+		}
+		if (isset($_POST['E'])){
+			$valor1 = 5;
+			Resposta($conexao,$nome,'Seguranca');
+			header( "location: Pergunta2.php");
+		}
+		if (isset($_POST['F'])){
+			$valor1 = 6;
+			Resposta($conexao,$nome,'Redes');
+			header( "location: Pergunta2.php");
+		}
 
-				<form>
-					<?php
-						$arraypronto = buscaopcao4($conexao);
-						foreach ($arraypronto as $buscando){
-					?>
-				<a href="Pergunta2.php"><input type="button" value=<?=$buscando["Descricao"]?> class="enviar"></input></a>
-				</form>
-				<?php } ?>
+
+    ?>
 
 			
-				<p class="alert-success"><a href="../home.php"><input type="button" value="Voltar a Home" class="enviar"></input></a>
 		
 	</body>
 </html>

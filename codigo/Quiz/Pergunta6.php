@@ -3,6 +3,7 @@ session_start();
 include("conexao.php");
 include("Funcoes.php");
 include("Funcoes6.php");
+$nome = $_SESSION["Nome"];
 ?>
 
 

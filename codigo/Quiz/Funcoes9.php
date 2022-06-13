@@ -14,7 +14,7 @@ function buscapergunta($conexao){
 
  function buscaopcao1($conexao){
      $arraypronto = array();
-     $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='33'");
+     $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='49'");
      $buscando = mysqli_fetch_assoc($resultado);
      array_push($arraypronto,$buscando);
      return $arraypronto;
@@ -22,7 +22,7 @@ function buscapergunta($conexao){
 
  function buscaopcao2($conexao){
     $arraypronto = array();
-    $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='34'");
+    $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='50'");
     $buscando = mysqli_fetch_assoc($resultado);
     array_push($arraypronto,$buscando);
     return $arraypronto;
@@ -30,7 +30,7 @@ function buscapergunta($conexao){
 
 function buscaopcao3($conexao){
     $arraypronto = array();
-    $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='35'");
+    $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='51'");
     $buscando = mysqli_fetch_assoc($resultado);
     array_push($arraypronto,$buscando);
     return $arraypronto;
@@ -38,18 +38,27 @@ function buscaopcao3($conexao){
 
 function buscaopcao4($conexao){
     $arraypronto = array();
-    $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='36'");
+    $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='52'");
     $buscando = mysqli_fetch_assoc($resultado);
     array_push($arraypronto,$buscando);
     return $arraypronto;
 }
 
-function Resposta($conexao,$nome,$area){
-   
-    $query ="INSERT into respostas (Area,Pontos,Usuario) values ('{$area}', 1, '{$nome}')";
-    $result = mysqli_query($conexao, $query);
-  
- }
+function buscaopcao5($conexao){
+    $arraypronto = array();
+    $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='53'");
+    $buscando = mysqli_fetch_assoc($resultado);
+    array_push($arraypronto,$buscando);
+    return $arraypronto;
+}
+
+function buscaopcao6($conexao){
+    $arraypronto = array();
+    $resultado = mysqli_query($conexao, "Select Descricao from opcao_para_marcar where Pergunta_Id_pergunta ='9' and Id_opcao ='54'");
+    $buscando = mysqli_fetch_assoc($resultado);
+    array_push($arraypronto,$buscando);
+    return $arraypronto;
+}
 
  function Resposta($conexao,$nome,$area){
    

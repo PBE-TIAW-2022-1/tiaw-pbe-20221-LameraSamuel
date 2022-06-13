@@ -3,6 +3,8 @@ session_start();
 include("conexao.php");
 include("funcoes.php");
 $nome = $_SESSION["Nome"];
+error_reporting(0);
+
 ?>
 
 <!DOCTYPE html>
@@ -33,9 +35,21 @@ if( !$_SESSION ){
     <div class="header">
     <div class="header-right">
         <a class="active" href="home.php">Home</a>
-        <a href="Quiz/index.php">Quiz</a>
+        <?php
+        $arraybuscar=buscaQuiz($conexao,$nome);
+        foreach($arraybuscar as $busca){
+        $quiz = $busca['Usuario'];
+        }
+        if($quiz == null){
+        echo"<a href='Quiz/index.php'>Quiz</a>";
+        }
+        else{
+        }
+
+        ?>
         <a href="paginaconstrução.html">Sobre</a>
     </div> 
+
 
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">☰</button>
@@ -62,14 +76,27 @@ if( !$_SESSION ){
 
     <div class="tela-login container">
         <ul class="nav nav-tabs" id="aba-cursos">
-            <a onclick="abre_modal('front.html')" id="botao_front" class="botao-esquerda" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Front-End</a>
-            <a onclick="abre_modal('BackEnd.html')" id="botao_back" class="botao-direita" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Back-End</a>
-            <a onclick="abre_modal('stack.html')" id="botao_full" class="botao-esquerda" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Full-Stack</a>
+            <a onclick="abre_modal('Front.html')" id="botao_front" class="botao-esquerda" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Front-End</a>
+            <a onclick="abre_modal('Back.html')" id="botao_back" class="botao-direita" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Back-End</a>
+            <a onclick="abre_modal('Full.html')" id="botao_full" class="botao-esquerda" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Full-Stack</a>
             <a onclick="abre_modal('DevOps.html')" id="botao_devops" class="botao-direita" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">DevOps</a>
-            <a onclick="abre_modal('seguranca.html')" id="botao_seg"class="botao-esquerda" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Segurança</a>
+            <a onclick="abre_modal('Seguranca.html')" id="botao_seg"class="botao-esquerda" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Segurança</a>
             <a onclick="abre_modal('Redes.html')" id="botao_redes" class="botao-direita" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Redes</a>
-            <a onclick="abre_modal('Quiz/index.php')" id="botao_quiz" class="botao-final" onmouseover="mudar_background('#1E90FF')" onmouseout="mudar_background('#272727')">Faça o Teste de Aptidão</a>
-        </ul>
+
+            <?php
+            $arraybuscar=buscaQuiz($conexao,$nome);
+            foreach($arraybuscar as $busca){
+            $quiz = $busca['Usuario'];
+            }
+
+            if($quiz == null){
+            echo"<a href='Quiz/index.php' id='botao_quiz' class='botao-final' onmouseover='mudar_background('#1E90FF')' onmouseout='mudar_background('#272727')'>Faça o Teste de Aptidão</a>";
+            }
+            else{
+            }
+            ?>
+        
+            </ul>
     </div>
 
 

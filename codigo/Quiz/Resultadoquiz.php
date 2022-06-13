@@ -1,3 +1,10 @@
+<?php
+session_start();
+include("conexao.php");
+include("Funcoes.php");
+$nome = $_SESSION["Nome"];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,6 +15,13 @@
 	<link rel="stylesheet" href="home.css">
 	
 </head>
+
+<?php
+if( !$_SESSION ){
+    header('location: ../login.php');
+    exit();
+}
+?>
 
 <body>
 
@@ -21,21 +35,21 @@
 		<form>
         <h1 class="titulo-aba-cursos">Resultado do seu teste</h1>
 		<?php
-$frase[0] = 'Front-End';
-$frase[1] = 'Back-End';
-$frase[2] = 'Full-Stack';
-$frase[3] = 'Segurança';
-$frase[4] = 'Dev Ops';
-$frase[5] = 'Redes';
-
-$numero = rand(0,5);
-
-echo "<div class=\"titulo-aba-cursos\">De acordo com suas respostas indicamos que voce procure saber mais sobre a area de $frase[$numero]</div>";
 
 
+$qtd = maior($conexao, $nome);
+foreach ($qtd as $quantidade){
+
+
+
+echo "<div class=\"titulo-aba-cursos\">De acordo com suas respostas indicamos que voce procure saber mais sobre a area de $quantidade[Area]</div>";
+$salvar = $quantidade["Area"];
 
 ?>
-<a href="Area.php"><input type="button" value="Saber mais sobre a area" class="enviar"></input></a>
-<a href="Pergunta10.php"><input type="button" value="Voltar ao Quiz" class="enviar"></input></a>
+
+<?php } ?>
+
+<a href="../<?=$salvar?>.html"><input type="button" value="Saber mais sobre a area" class="enviar"></input></a>
+
 </body>
 </html>

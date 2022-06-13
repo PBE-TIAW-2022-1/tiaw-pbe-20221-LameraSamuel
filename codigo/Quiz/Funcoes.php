@@ -80,4 +80,23 @@ function buscausuario($conexao,$email){
     return $usuarios;
  }
 
+
+
+ function maior($conexao, $nome){
+
+   $qtd = array();
+   $maior = mysqli_query($conexao,"SELECT Area, COUNT(Area) AS qtd FROM respostas WHERE Usuario = '{$nome}' GROUP BY Area ORDER BY qtd DESC LIMIT 1");
+   while($quantidade = mysqli_fetch_assoc($maior)){       
+      array_push($qtd, $quantidade);
+  }
+   return $qtd;
+
+ }
+
 ?>
+
+
+
+
+
+

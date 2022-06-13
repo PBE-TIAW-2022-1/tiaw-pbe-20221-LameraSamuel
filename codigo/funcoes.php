@@ -81,4 +81,14 @@ function buscausuario($conexao,$email){
     return $usuarios;
  }
 
+ function buscaQuiz($conexao,$nome){
+   $arraybuscar = array();
+   $result = mysqli_query($conexao, "Select Usuario from respostas where Usuario = '{$nome}'");
+   $busca = mysqli_fetch_assoc($result);
+   array_push($arraybuscar, $busca);
+   return $arraybuscar;
+
+}
+
+
 ?>

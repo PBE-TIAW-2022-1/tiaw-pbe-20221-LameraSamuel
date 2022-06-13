@@ -93,7 +93,7 @@ if( !$_SESSION ){
 							$arraypronto = buscaopcao5($conexao);
 							foreach ($arraypronto as $buscando){
 						?>
-                        <input id="nome_login" name="D" value=<?=$buscando["Descricao"]?> type="submit" />
+                        <input id="nome_login" name="E" value=<?=$buscando["Descricao"]?> type="submit" />
                     </p><?php } ?>
 
 					
@@ -102,7 +102,7 @@ if( !$_SESSION ){
 							$arraypronto = buscaopcao6($conexao);
 							foreach ($arraypronto as $buscando){
 						?>
-                        <input id="nome_login" name="D" value=<?=$buscando["Descricao"]?> type="submit" />
+                        <input id="nome_login" name="F" value=<?=$buscando["Descricao"]?> type="submit" />
                     </p><?php } ?>
 				
 
